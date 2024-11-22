@@ -10,18 +10,31 @@
 <body>
   <p-toolbar styleClass="bg-bluegray-900 opacity-70">
     <div class="p-toolbar-group-start">
-      <h5 class="text-white"><i class="pi pi-home" style="font-size: 2rem"></i>Home</h5>
+      <h5 class="text-white font-bold"><i class="pi pi-home" style="font-size: 2rem"></i>Home</h5>
     </div>
 
     <div class="p-toolbar-group-end ">
-      <p-button class="mx-5 " severity="primary" [rounded]="true" routerLink="/register">Register</p-button>
-      <p-button severity="danger" [rounded]="true" routerLink="/login">Login</p-button>
+      <p-button styleClass="font-bold" class="mx-5 " severity="primary" [rounded]="true" routerLink="/register">Register</p-button>
+      <p-button styleClass="font-bold" severity="danger" [rounded]="true" routerLink="/login">Login</p-button>
 
     </div>
   </p-toolbar>
 
   <div class="bgimg-text mt-8">
-    <h1 class="mt-4 pb-5 pl-5 font-bold text-bluegray-50 border-left-3 border-bottom-3 text-8xl ">Welcome to Web CRUD Angular<i class="ml-5 pi pi-spin pi-cog" style="font-size: 5rem"></i></h1>
+    <h1 class="mt-4 pb-5 pl-5 font-bold text-bluegray-50 border-left-3 border-bottom-3 text-8xl ">Welcome to Web CRUD Angular<i class="ml-5 pi pi-spin pi-cog text-red-600" style="font-size: 5rem"></i></h1>
+    <p-progressBar mode="indeterminate" [style]="{ height: '10px' }" styleClass="mb-3 bg-bluegray-900"/>
+
+    <p-inplace>
+      <ng-template pTemplate="display" >
+          <span class="text-red-500 font-bold">Please PRESS!!</span>
+      </ng-template>
+      <ng-template pTemplate="content">
+          <span class="text-6xl text-white font-bold">
+              Hi User, I am Intern to this AR Group Nice to meet you guy.
+          </span>
+      </ng-template>
+  </p-inplace>
+
   </div>
 
 

@@ -10,7 +10,7 @@
 <body class="bg-blue-600">
   <div class="flex justify-content-center align-items-center min-h-screen ">
     <p-card header="Register" [style]="{width:'400px'}">
-      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()" >
         <div class="field">
           <label for="fullname">Full Name</label>
           <input pInputText class="w-full" id="fullname" formControlName="fullname" />
