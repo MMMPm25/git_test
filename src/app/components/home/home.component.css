@@ -1,0 +1,9 @@
+.btn{
+  border-radius: 50px;
+}
+input:is(:focus){
+  border:1px solid transparent;
+  transition: all 0.1s ease;
+  background: linear-gradient(rgb(37, 36, 36),rgb(37, 36, 36))
+  padding-box,linear-gradient(45deg,blue,red)border-box;
+}

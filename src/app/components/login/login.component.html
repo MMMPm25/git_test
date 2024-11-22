@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body class="bg-red-700">
+  <div class="flex justify-content-center align-items-center min-h-screen">
+    <p-card header="Login" [style]="{width:'400px'}">
+      <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="text" pInputText [(ngModel)]="login.email" class="w-full" id="email" name="email"
+            #email="ngModel" required pattern="[a-z0-9\._%\+\-]+@[a-z0-9\.\-]+\.[a-z]{2,}$" />
+          @if(email.invalid && (email.dirty || email.touched )){
+          <small class="block p-error">
+            @if(email.hasError('required')){
+            <span>Email is required</span>
+            }@else if(email.hasError('pattern')){
+            <span>Email is invalid</span>
+            }
+          </small>
+          }
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <p-password [(ngModel)]="login.password" [feedback]="false" [toggleMask]="true" inputId="password"
+            name="password" #password="ngModel" inputStyleClass="w-full" styleClass="w-full" required />
+          @if(password.invalid && (password.dirty || password.touched)){
+          <small class="block p-error">Password is required</small>
+          }
+        </div>
+        <p-button label="SIGN IN" styleClass="w-full p-button-danger " [disabled]="loginForm.invalid"
+          type="submit"></p-button>
+        <p-button label="BACK" styleClass="w-full p-button-secondary mt-3" routerLink="/first"
+          [ngStyle]="{backgroundColor:'surface-900'}"></p-button>
+
+        <div class="mt-2 ">Not a Login? <a class="no-underline text-blue-500 font-bold " routerLink="/register"> Register</a></div>
+      </form>
+    </p-card>
+
+  </div>
+</body>
+
+</html>

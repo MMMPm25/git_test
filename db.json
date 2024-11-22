@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": "e06c",
+      "fullname": "Tanawat",
+      "email": "nongmtanawat@gmail.com",
+      "password": "asd"
+    },
+    {
+      "id": "90ed",
+      "fullname": "test",
+      "email": "test@gmail.com",
+      "password": "test123"
+    }
+  ],
+  "product": [
+    {
+      "id": "ba66",
+      "pname": "Hero Academia",
+      "price": "10,000"
+    },
+    {
+      "id": "00a4",
+      "pname": "Hololive",
+      "price": "500"
+    },
+    {
+      "id": "b54c",
+      "pname": "DanDaDan!!!",
+      "price": "100"
+    }
+  ]
+}
