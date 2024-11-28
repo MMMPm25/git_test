@@ -10,8 +10,8 @@
 <body class="bg-bluegray-900">
   <div class="flex justify-content-center align-items-center min-h-screen ">
     <p-card styleClass="border-3 border-white" [style]="{width:'400px'}" [style]="{'background':'transparent'}">
-      <h1 class="text-center font-bold text-white"><p class="text-red-600 inline">R</p>egister</h1>
-      <form [formGroup]="registerForm" (ngSubmit)="onRegister()" >
+      <h1 class="text-center font-bold text-white"><p class="text-red-600 inline">Add</p>User</h1>
+      <form [formGroup]="addForm" (ngSubmit)="onUadd()" >
         <div class="field">
           <label class="pi pi-user text-red-600 font-bold"for="fullname"><p class="text-white inline">FullName</p></label>
           <input pInputText class="w-full text-white" [style]="{'background':'transparent'}" id="fullname" formControlName="fullname" />
@@ -51,16 +51,16 @@
           @if(confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)){
           <small class="block p-error">Confirm Password is required</small>
           }
-          @if(registerForm.hasError('passwordMismatch')&& password.valid && confirmPassword.valid){
+          @if(addForm.hasError('passwordMismatch')&& password.valid && confirmPassword.valid){
           <small class="block p-error">Password mismatch</small>
           }
 
         </div>
 
-        <button pButton type="submit" label="SIGN UP" class="w-full  p-button-danger " [disabled]="registerForm.invalid" ></button>
-        <p-button label="BACK" styleClass="w-full p-button-secondary mt-3" routerLink="/first"
+        <button pButton type="submit" label="SUBMIT" class="w-full  p-button-danger " [disabled]="addForm.invalid" ></button>
+        <p-button label="BACK" styleClass="w-full p-button-secondary mt-3" routerLink="/user"
         [ngStyle]="{backgroundColor:'surface-900'}"></p-button>
-        <div class="mt-2 text-white font-bold">Already a Login? <a class="no-underline text-red-500 font-bold " routerLink="/login"> Login</a></div>
+
 
       </form>
     </p-card>
@@ -68,3 +68,4 @@
 </body>
 
 </html>
+

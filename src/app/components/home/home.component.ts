@@ -10,10 +10,23 @@ import { HomeService } from '../../Services/home.service';
 import { ToastrService } from 'ngx-toastr';
 import { ToolbarModule } from 'primeng/toolbar';
 import { RouterLink } from '@angular/router';
-@Component({
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { TableModule } from 'primeng/table';@Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonModule, FormsModule, AsyncPipe,ToolbarModule,RouterLink,CommonModule],
+  imports: [ButtonModule,
+    FormsModule,
+    AsyncPipe,
+    ToolbarModule,
+    RouterLink,
+    CommonModule,
+    InputTextModule,
+    ButtonModule,
+    TableModule,
+    CardModule,
+
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

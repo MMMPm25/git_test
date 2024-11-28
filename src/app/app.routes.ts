@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { authGuard } from './guards/auth.guard';
 import { FirstComponent } from './components/first/first.component';
 import { UserComponent } from './components/user/user.component';
+import { AddUComponent } from './components/add-u/add-u.component';
 
 
 
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'home',component:HomeComponent,canActivate:[authGuard]},
   {path:'user',component:UserComponent},
+  {path:'add',component:AddUComponent},
   {path:'', redirectTo:'first',pathMatch:'full'},
 
 

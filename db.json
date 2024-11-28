@@ -11,6 +11,18 @@
       "fullname": "test",
       "email": "test@gmail.com",
       "password": "test123"
+    },
+    {
+      "id": "bd8a",
+      "fullname": "Titan007",
+      "email": "titan@gmail.com",
+      "password": "Titan007"
+    },
+    {
+      "id": "2d6c",
+      "fullname": "Hotdog",
+      "email": "hd@gmail.com",
+      "password": "hotdog"
     }
   ],
   "product": [
@@ -22,12 +34,12 @@
     {
       "id": "00a4",
       "pname": "Hololive",
-      "price": "500"
+      "price": "1,500"
     },
     {
       "id": "b54c",
-      "pname": "DanDaDan!!!",
-      "price": "100"
+      "pname": "DanDaDan",
+      "price": "175"
     }
   ]
 }
