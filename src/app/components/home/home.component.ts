@@ -31,13 +31,18 @@ import { TableModule } from 'primeng/table';@Component({
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+
   pList: HomeModel[] = [];
+  display : any;
   searchQuery: string = '';  // Store the search query
   filteredUserList: HomeModel[] = [];
   editMode: boolean = false;
-  ngOnInit(): void {
-    this.getPList();
 
+  ngOnInit(): void {
+
+    this.getPList();
+    const email = sessionStorage.getItem('email');
+    this.display = email;
   }
 
   private router = inject(Router)

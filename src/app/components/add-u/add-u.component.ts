@@ -38,6 +38,7 @@ export class AddUComponent {
     ]),
     password:new FormControl('',[Validators.required]),
     confirmPassword:new FormControl('',[Validators.required]),
+    level: new FormControl('admin', [Validators.required]),
   },{
     validators:passwordMismatchValidator
   });
@@ -46,6 +47,7 @@ export class AddUComponent {
     //console.log(this.registerForm.value)
     const postData = {...this.addForm.value};
     delete postData.confirmPassword;
+    postData.level = 'admin';//add level == admin เมื่อ ทำการเพิ่ม admin
     this.registerService.registerUser(postData as RegisterPostData).subscribe({
       next:(response) =>{
         //console.log(response);
@@ -54,7 +56,7 @@ export class AddUComponent {
           summary:'Success',
           detail:'Registered successfully',
         });
-        this.router.navigate(['user']);
+        this.router.navigate(['admin']);
         console.log(response);
       },
       error:(err)=>{

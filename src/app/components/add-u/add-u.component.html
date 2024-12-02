@@ -10,7 +10,7 @@
 <body class="bg-bluegray-900">
   <div class="flex justify-content-center align-items-center min-h-screen ">
     <p-card styleClass="border-3 border-white" [style]="{width:'400px'}" [style]="{'background':'transparent'}">
-      <h1 class="text-center font-bold text-white"><p class="text-red-600 inline">Add</p>User</h1>
+      <h1 class="text-center font-bold text-white"><p class="text-red-600 inline">Add</p>Admin</h1>
       <form [formGroup]="addForm" (ngSubmit)="onUadd()" >
         <div class="field">
           <label class="pi pi-user text-red-600 font-bold"for="fullname"><p class="text-white inline">FullName</p></label>
@@ -58,7 +58,7 @@
         </div>
 
         <button pButton type="submit" label="SUBMIT" class="w-full  p-button-danger " [disabled]="addForm.invalid" ></button>
-        <p-button label="BACK" styleClass="w-full p-button-secondary mt-3" routerLink="/user"
+        <p-button label="BACK" styleClass="w-full p-button-secondary mt-3" routerLink="/admin"
         [ngStyle]="{backgroundColor:'surface-900'}"></p-button>
 
 

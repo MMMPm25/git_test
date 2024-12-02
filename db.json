@@ -23,6 +23,20 @@
       "fullname": "Hotdog",
       "email": "hd@gmail.com",
       "password": "hotdog"
+    },
+    {
+      "id": "9cd9",
+      "fullname": "ggez",
+      "email": "ggez@gmail.com",
+      "password": "ggez",
+      "level": "admin"
+    },
+    {
+      "id": "2848",
+      "fullname": "Pm2.5",
+      "email": "pm25@gmail.com",
+      "password": "Pm2.5",
+      "level": "admin"
     }
   ],
   "product": [

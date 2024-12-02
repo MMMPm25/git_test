@@ -38,14 +38,19 @@ export class RegisterComponent {
     ]),
     password:new FormControl('',[Validators.required]),
     confirmPassword:new FormControl('',[Validators.required]),
+    level: new FormControl('user', [Validators.required]),
   },{
     validators:passwordMismatchValidator
   });
 
   onRegister(){
     //console.log(this.registerForm.value)
+
     const postData = {...this.registerForm.value};
+
+
     delete postData.confirmPassword;
+    postData.level = 'user';//add data
     this.registerService.registerUser(postData as RegisterPostData).subscribe({
       next:(response) =>{
         //console.log(response);
