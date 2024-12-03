@@ -30,6 +30,7 @@ export class RegisterComponent {
   private registerService = inject(AuthService);
   private messageService = inject(MessageService);
   private router = inject(Router);
+  value : any;
   registerForm = new FormGroup({
     fullname:new FormControl('',[Validators.required]),
     email:new FormControl('',[

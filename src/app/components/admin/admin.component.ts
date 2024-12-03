@@ -30,6 +30,7 @@ import { UserModel } from '../../Model/home';
   styleUrl: './admin.component.css'
 })
 export class AdminComponent implements OnInit{
+  display : any;
   searchQuery: string = '';
   UList: UserModel[] = [];
   filteredUsersL: UserModel[] = [];
@@ -41,17 +42,22 @@ export class AdminComponent implements OnInit{
   getUList() {
     this._homeService.getU().subscribe((res) => {
       this.UList = res;
-      this.filteredUsersL = res.filter(user => user.level === 'admin');
+      const email = sessionStorage.getItem('email');
+      this.filteredUsersL = res.filter(user => user.level === 'admin'&& user.email !== email);
+
+      this.display = email;
     });
   }
   onSearch(): void {
     if (this.searchQuery.trim() === '') {
+      const email = sessionStorage.getItem('email');
       // หากช่องค้นหาว่าง ให้แสดงผู้ใช้ทั้งหมดที่มี level = admin
-      this.filteredUsersL = this.UList.filter(user => user.level === 'admin');
+      this.filteredUsersL = this.UList.filter(user => user.level === 'admin' && user.email !== email);
     } else {
+      const email = sessionStorage.getItem('email');
       // ค้นหาผู้ใช้ที่มี level = admin และตรงกับคำค้น
       this.filteredUsersL = this.UList.filter(user =>
-        user.level === 'admin' &&
+        user.level === 'admin' && user.email !== email &&
         (user.fullname && user.fullname.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
          user.email && user.email.toLowerCase().includes(this.searchQuery.toLowerCase()))
       );

@@ -19,12 +19,6 @@
       "password": "Titan007"
     },
     {
-      "id": "2d6c",
-      "fullname": "Hotdog",
-      "email": "hd@gmail.com",
-      "password": "hotdog"
-    },
-    {
       "id": "9cd9",
       "fullname": "ggez",
       "email": "ggez@gmail.com",
@@ -37,12 +31,19 @@
       "email": "pm25@gmail.com",
       "password": "Pm2.5",
       "level": "admin"
+    },
+    {
+      "id": "f68b",
+      "fullname": "kong",
+      "email": "kong@gmail.com",
+      "password": "Kong111",
+      "level": "user"
     }
   ],
   "product": [
     {
       "id": "ba66",
-      "pname": "Hero Academia",
+      "pname": "Hero Academia!!",
       "price": "10,000"
     },
     {
@@ -54,6 +55,11 @@
       "id": "b54c",
       "pname": "DanDaDan",
       "price": "175"
+    },
+    {
+      "id": "9f78",
+      "pname": "Test book",
+      "price": "100"
     }
   ]
 }

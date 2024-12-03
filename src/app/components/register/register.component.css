@@ -4,3 +4,8 @@
 .rb{
   border-radius: 500px;
 }
+.blur
+{
+  background: transparent;
+  backdrop-filter: blur(20px);
+}

@@ -12,6 +12,9 @@ import { ToastModule } from 'primeng/toast';
 import { SplitterModule } from 'primeng/splitter';
 import { AccordionModule } from 'primeng/accordion';
 import { TabViewModule } from 'primeng/tabview';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { StepperModule } from 'primeng/stepper';
+import { ScrollTopModule } from 'primeng/scrolltop';
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -27,7 +30,10 @@ import { TabViewModule } from 'primeng/tabview';
     CardModule,
     SplitterModule,
     AccordionModule,
-    TabViewModule
+    TabViewModule,
+    SpeedDialModule,
+    StepperModule,
+    ScrollTopModule
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
@@ -35,15 +41,49 @@ import { TabViewModule } from 'primeng/tabview';
 export class MainComponent implements OnInit{
   display : any;
   menu: MenuItem[]| undefined;
+  items: MenuItem[] | any;
+
+  messageService: any;
   ngOnInit(){
     this.menu =[
-      {label:'Home',routerLink:['/'],icon: PrimeIcons.HOME},
+      {label:'Home',icon: PrimeIcons.HOME},
 
 
-    ]
+    ],
+    this.items= [
+      {
+          icon: 'pi pi-pencil',
+          command: () => {
+              this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+          }
+      },
+      {
+          icon: 'pi pi-refresh',
+          command: () => {
+              this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+          }
+      },
+      {
+          icon: 'pi pi-trash',
+          command: () => {
+              this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+          }
+      },
+      {
+          icon: 'pi pi-upload',
+          routerLink: ['/fileupload']
+      },
+      {
+          icon: 'pi pi-external-link',
+          url: 'http://angular.io'
+
+      }
+  ];
     const email = sessionStorage.getItem('email');
     this.display = email;
+
   }
+
   private router = inject(Router)
   logout() {
     sessionStorage.clear();

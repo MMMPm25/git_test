@@ -1,0 +1,17 @@
+
+.bd{
+  position:relative;
+
+  width: auto;
+  height: auto;
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right:10%;
+  z-index: 1;
+}
+.dt{
+  border-radius: 50px;
+  margin-left: 10%;
+  margin-right:10%;
+  margin-bottom: 10px;
+}

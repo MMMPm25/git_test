@@ -112,17 +112,17 @@
         </div>
         <div class="bg-bluegray-900 ">
 
-          <form class="grid needs-validation border-white border-top-1" novalidate #productForm="ngForm"
+          <form class="grid  border-white border-top-1" novalidate #productForm="ngForm"
             (ngSubmit)="onSubmit(productForm)">
-            <div class="col-6">
+            <div class="sm:col-12 md:col-12 lg:col-5">
               <label for="validationCustom01" class=" text-white">Product Name</label>
-              <input pInputText type="text" name="pname" [(ngModel)]="product.pname" class="text-white bg-bluegray-900 h-2rem"
+              <input pInputText type="text" name="pname" [(ngModel)]="product.pname" class="text-white bg-bluegray-900 m-auto h-2rem"
                 id="validationCustom01" value="Mark" required>
 
             </div>
-            <div class="col-6">
+            <div class="sm:col-12 md:col-12 lg:col-5">
               <label for="validationCustom02" class="text-white">Price</label>
-              <input pInputText type="text" name="price" [(ngModel)]="product.price" class="text-white bg-bluegray-900 h-2rem"
+              <input pInputText type="text" name="price" [(ngModel)]="product.price" class="text-white bg-bluegray-900 m-auto h-2rem"
                 id="validationCustom02" value="Otto" required>
 
             </div>

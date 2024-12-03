@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p-menubar [model]="menu" [style]="{'background':'transparent'}" class="layout-topbar"
+    styleClass="text-white border-bottom-3 border-red-600">
+    <ng-template pTemplate="start">
+      <img src="/assets/img/ajs.png" height="40" class="mr-2">
+    </ng-template>
+
+    <ng-template pTemplate="end">
+
+
+      <button pButton label="Logout" [rounded]="true" icon="pi pi-sign-out" class="bg-red-700 p-button-secondary"
+        (click)="logout()"></button>
+    </ng-template>
+  </p-menubar>
+  <button pButton label="Back" [rounded]="true" icon="pi pi-sign-out" class="bg-red-700 p-button-secondary mt-4 ml-2"
+    routerLink="/main"></button>
+  <div class="bg-bluegray-900 bd border-round-3xl">
+    <div class="grid ">
+      <div class="sm:col-12 md:col-12 lg:col-4 text-center ">
+        <img src="/assets/img/gura.png" width="350">
+      </div>
+
+      <div class="sm:col md:col lg:col-6 my-5 mx-5 bg-white border-round-3xl">
+        <div class="m-5">
+          <h1 class="font-bold ">Gawr <p class="text-red-500 inline">Gura</p>
+          </h1>
+          <h3 class="font-bold ">Weapon : <p class="text-red-500 inline">Trispear</p>
+          </h3>
+          <h3 class="font-bold">Age : <p class="text-red-500 inline">Unknown</p>
+          </h3>
+          <h3 class="font-bold ">Favorite : <p class="text-red-500 inline">Ame, Ina, Cali</p>
+          </h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="dt bg-bluegray-900 dt mt-5">
+    <p-card styleClass="bg-bluegray-900 border-round-3xl">
+      <h1 class="text-4xl font-bold text-white ">Content<p class="text-red-500 inline">s</p>
+      </h1>
+      <p-accordion [multiple]="true" [activeIndex]="[0]">
+        <p-accordionTab header="Overview">
+          <p>
+            Gawr Gura (がうる・ぐら) born June 20th, which is also the date that the movie Jaws debuted, is a Shark-Human
+            hybrid Virtual YouTuber from Atlantis that debuted as a member of the Hololive English -Myth-.
+
+            Best known for her verbal tic, "A", she is an energetic and amusing Shark with a tendency for pranks. She
+            has a vast knowledge of memes and will often use them in her jokes. Her love to banter between her fans and
+            fellow members gives an atmosphere similar to hanging out and playing games with friends. While she lacks a
+            good sense of direction and a grasp on basic math, she is still quick-witted and clever, solving puzzles
+            creatively and quickly. Her favorite games to play are rhythm, horror, and Western-themed games. Along with
+            gaming, she is an amazing singer with her favorites to sing being City Pop, Anime, and classic 2000's and
+            oldie songs.
+          </p>
+        </p-accordionTab>
+        <p-accordionTab header="Personality">
+          <p>
+            A friendly and mischievous shark, Gawr Gura often plays around with her chumbuds and fellow Hololive
+            members. Best compared to a friend that exchanges back and forth teasing and encouragement, Gura welcomes
+            everyone to hang out and watch her be a dumb shark and do foolish antics. Despite being a over 9000 year old
+            shark, she cleverly uses memes and simple humor as she plays games. Due to unknowingly mistaking the word
+            "Simp" for "Shrimp", it has since been the word to denote someone who is devoted to the shark, either
+            through giving donations, joining membership, or regularly watching Gura.
+
+            She also gives useful life advice such as "live life without a care for other people's opinions" and "to do
+            things that makes you happy". She is seen by others to be a "little sister" character to which she says that
+            she is too old to be someone's sister and rather she is a Gurandma (a play of words on Grandma and Gura).
+            While it seems that she gets angry at chat for inciting flat jokes and teasing the shark, she states herself
+            that she is not genuinely mad and it is all in good fun. She is often joking and making fun of chat back.
+            During horror games, she pokes a lot of fun while playing and it could possibly serve as her coping
+            mechanism against being scared. She is hard working and tries her best to give a good streaming experience
+            to her viewers. She works hard behind the scenes to practice her singing for karaokes and doing research for
+            Minecraft or other gameplay. She is also learning the ukulele.
+
+            Of her fellow HololiveEN members, she gets along with Amelia Watson the best, often joking back and forth
+            with each other. The fun exchanges and affectionate words between each other has lead to the chumbuds
+            calling their pairing AmeSame (Ame short for Amelia and Same for the Japanese word for Shark). They're close
+            enough that they knew what each other were saying during a simultaneous, but not a collab, Minecraft stream.
+            They both like the pairing name and has both encouraged the ship in their own ways. Ame is often watching
+            Gura's streams and has also parodied a song after Gura, calling it "Gura doesn't know I exist". Gura has
+            talked multiple times about how she likes Ame and how much fun she has together.
+          </p>
+        </p-accordionTab>
+        <p-accordionTab header="Milestones">
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos...
+          </p>
+        </p-accordionTab>
+      </p-accordion>
+    </p-card>
+  </div>
+
+  <div class="dt bg-bluegray-900 dt mt-5">
+    <p-card styleClass="bg-bluegray-900 border-round-3xl">
+      <h1 class="text-4xl font-bold text-white ">Milestone<p class="text-red-500 inline">s</p>
+      </h1>
+      <p-accordion [multiple]="true" [activeIndex]="[0]">
+        <p-accordionTab header="2020">
+          <li>
+            July 16 Twitter account creation date.
+            July 16 YouTube channel creation date.
+            Sep. 13 YouTube debut, first uploaded video and achieved a 100,000 YouTube subscriber milestone on her debut
+            stream.
+            Sep. 15 Achieved a 200,000 YouTube subscriber milestone.
+            Sep. 16 Achieved a 250,000 YouTube subscriber milestone.
+            Sep. 17 Achieved a 300,000 YouTube subscriber milestone.
+            Sep. 21 Achieved a 400,000 YouTube subscriber milestone.
+            Sep. 26 Achieved a 500,000 YouTube subscriber milestone.
+            Oct. 02 Achieved a 600,000 YouTube subscriber milestone.
+            Oct. 02 Membership feature opened.
+            Oct. 07 Achieved a 700,000 YouTube subscriber milestone.
+            Oct. 12 Achieved an 800,000 YouTube subscriber milestone.
+            Oct. 17 Achieved a 900,000 YouTube subscriber milestone.
+            Oct. 23 Achieved a 1,000,000 YouTube subscriber milestone. She is the 1st VTuber endorsed by Hololive that
+            has reached this milestone.[17]
+            Nov. 30 Achieved a 1,500,000 YouTube subscriber milestone.
+          </li>
+        </p-accordionTab>
+        <p-accordionTab header="2021">
+          <p>
+            A friendly and mischievous shark, Gawr Gura often plays around with her chumbuds and fellow Hololive
+            members. Best compared to a friend that exchanges back and forth teasing and encouragement, Gura welcomes
+            everyone to hang out and watch her be a dumb shark and do foolish antics. Despite being a over 9000 year old
+            shark, she cleverly uses memes and simple humor as she plays games. Due to unknowingly mistaking the word
+            "Simp" for "Shrimp", it has since been the word to denote someone who is devoted to the shark, either
+            through giving donations, joining membership, or regularly watching Gura.
+
+            She also gives useful life advice such as "live life without a care for other people's opinions" and "to do
+            things that makes you happy". She is seen by others to be a "little sister" character to which she says that
+            she is too old to be someone's sister and rather she is a Gurandma (a play of words on Grandma and Gura).
+            While it seems that she gets angry at chat for inciting flat jokes and teasing the shark, she states herself
+            that she is not genuinely mad and it is all in good fun. She is often joking and making fun of chat back.
+            During horror games, she pokes a lot of fun while playing and it could possibly serve as her coping
+            mechanism against being scared. She is hard working and tries her best to give a good streaming experience
+            to her viewers. She works hard behind the scenes to practice her singing for karaokes and doing research for
+            Minecraft or other gameplay. She is also learning the ukulele.
+
+            Of her fellow HololiveEN members, she gets along with Amelia Watson the best, often joking back and forth
+            with each other. The fun exchanges and affectionate words between each other has lead to the chumbuds
+            calling their pairing AmeSame (Ame short for Amelia and Same for the Japanese word for Shark). They're close
+            enough that they knew what each other were saying during a simultaneous, but not a collab, Minecraft stream.
+            They both like the pairing name and has both encouraged the ship in their own ways. Ame is often watching
+            Gura's streams and has also parodied a song after Gura, calling it "Gura doesn't know I exist". Gura has
+            talked multiple times about how she likes Ame and how much fun she has together.
+          </p>
+        </p-accordionTab>
+        <p-accordionTab header="2022">
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos...
+          </p>
+        </p-accordionTab>
+      </p-accordion>
+    </p-card>
+  </div>
+
+  <footer class="bg-bluegray-900 text-white text-center pt-3">
+    <div class="flex gap-2 justify-content-center pb-2">
+      <i class="pi pi-facebook text-4xl"></i>
+      <i class="pi pi-youtube text-4xl"></i>
+      <i class="pi pi-prime text-4xl"></i>
+      <i class="pi pi-amazon text-4xl"></i>
+    </div>
+    <div class="flex gap-2 justify-content-center">
+      <p>Privacy Policy</p>
+      <p>Terms of use</p>
+      <p>Our Company</p>
+
+    </div>
+    <p><img src="/assets/img/c.png" width="20" class="text-white bg-white">It a footer.</p>
+  </footer>
+</body>
+
+</html>

@@ -18,13 +18,13 @@ export class HomeService {
   getP() :Observable<HomeModel[]>{
     return this.httpp.get<HomeModel[]>(this.apiurl)
   }
-  addP(product : HomeModel) : Observable<HomeModel>{
+  addP(product : HomeModel) : Observable<HomeModel>{//post = Add
     return this.httpp.post<HomeModel>(this.apiurl, product);
   }
-  updateP(product : HomeModel) : Observable<HomeModel>{
+  updateP(product : HomeModel) : Observable<HomeModel>{//put = Edit
     return this.httpp.put<HomeModel>(`${this.apiurl}/${product.id}`,product );
   }
-  deleteU(id:number):Observable<void>{
+  deleteU(id:number):Observable<void>{//delete = delete
     return this.httpp.delete<void>(`${this.au}/${id}`);
   }
   deleteP(pid:number):Observable<void>{

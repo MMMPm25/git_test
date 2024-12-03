@@ -8,6 +8,7 @@ import { UserComponent } from './components/user/user.component';
 import { AddUComponent } from './components/add-u/add-u.component';
 import { MainComponent } from './components/main/main.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 
 
@@ -20,6 +21,7 @@ export const routes: Routes = [
   {path:'add',component:AddUComponent},
   {path:'main',component:MainComponent,canActivate:[authGuard]},
   {path:'admin',component:AdminComponent},
+  {path:'detail',component:DetailComponent},
   {path:'', redirectTo:'first',pathMatch:'full'},
 
 

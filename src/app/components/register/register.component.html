@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-bluegray-900">
-  <div class="flex justify-content-center align-items-center min-h-screen ">
+  <div class="flex justify-content-center align-items-center min-h-screen blur">
     <p-card styleClass="border-3 border-white" [style]="{width:'400px'}" [style]="{'background':'transparent'}">
       <h1 class="text-center font-bold text-white"><p class="text-red-600 inline">R</p>egister</h1>
       <form [formGroup]="registerForm" (ngSubmit)="onRegister()" >
@@ -36,7 +36,7 @@
 
         <div class="field">
           <label class="pi pi-lock text-red-600 font-bold" for="password"><P class="text-white inline">Password</P></label>
-          <p-password formControlName="password" [style]="{'background':'transparent'}" [feedback]="false" [toggleMask]="true" inputId="password"
+          <p-password [(ngModel)]="value" formControlName="password" [style]="{'background':'transparent'}" [feedback]="false" [toggleMask]="true" inputId="password"
           inputStyleClass="w-full text-white bg-bluegray-900" styleClass="w-full" />
 
           @if(password.invalid && (password.dirty || password.touched)){
